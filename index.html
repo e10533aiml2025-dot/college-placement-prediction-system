@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Placement Prediction System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">CareerPredict</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#predict">Predict</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <p class="tag">YOUR CAREER STARTS HERE</p>
+        <h1>College Placement<br>Prediction System</h1>
+        <p>
+            Understand your placement readiness using your
+            academic performance, skills and experience.
+        </p>
+        <a href="#predict" class="main-btn">Predict My Placement</a>
+    </section>
+
+    <main>
+        <section class="form-section" id="predict">
+            <h2>Student Details</h2>
+            <p class="subtitle">
+                Enter your information to get an estimated result.
+            </p>
+
+            <form id="placementForm">
+                <div class="form-grid">
+
+                    <div class="field">
+                        <label for="studentName">Student Name</label>
+                        <input type="text" id="studentName"
+                               placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="cgpa">CGPA (0–10)</label>
+                        <input type="number" id="cgpa"
+                               min="0" max="10" step="0.01"
+                               placeholder="e.g. 8.2" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="aptitude">Aptitude Score (0–100)</label>
+                        <input type="number" id="aptitude"
+                               min="0" max="100"
+                               placeholder="e.g. 75" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="skills">Technical Skills (0–10)</label>
+                        <input type="number" id="skills"
+                               min="0" max="10"
+                               placeholder="Rate your skills" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="internships">Internships Completed</label>
+                        <input type="number" id="internships"
+                               min="0" max="5" step="1"
+                               placeholder="0 to 5" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="projects">Projects Completed</label>
+                        <input type="number" id="projects"
+                               min="0" max="10" step="1"
+                               placeholder="0 to 10" required>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="main-btn predict-btn">
+                    Predict Placement Readiness
+                </button>
+            </form>
+
+            <div id="result" class="result hidden" aria-live="polite">
+                <h2 id="greeting">Your Result</h2>
+                <div id="score">0%</div>
+                <h3 id="status"></h3>
+                <p id="explanation"></p>
+                <h3>Suggestions to Improve</h3>
+                <ul id="suggestions"></ul>
+                <p class="disclaimer">
+                    This is a demo estimate based on a scoring formula,
+                    not an AI prediction or a guarantee of placement.
+                </p>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <h2>About the Project</h2>
+            <p>
+                This project helps students understand placement
+                readiness based on academic performance, aptitude,
+                technical skills, internships and projects.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>College Placement Prediction System | Student Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
